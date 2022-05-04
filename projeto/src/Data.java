@@ -5,7 +5,7 @@ public class Data {
     int conttotal = 0;
     int contman = 0;
     int contwom = 0;
-    private ArrayList<People> vetpessoa = new ArrayList<>();
+    private ArrayList<People> vetpep = new ArrayList<>();
 
 
     public void ast(int rows) {
@@ -17,19 +17,19 @@ public class Data {
 
 
     public void inserepessoa(People people) {
-        this.vetpessoa.add(people);
+        this.vetpep.add(people);
         conttotal++;
     }
 
     public void mostrardados() {
         System.out.println("All registers:");
         ast(0);
-        for (int i = 0; i < vetpessoa.size(); i++) {
-            System.out.println("Gender: " + vetpessoa.get(i).getType());
-            System.out.println("Name: " + vetpessoa.get(i).getName());
-            System.out.println("Surname: " + vetpessoa.get(i).getSurname());
-            System.out.println("Age: " + vetpessoa.get(i).getAge());
-            System.out.println("height: " + vetpessoa.get(i).getHeightcm() / 100 + " Meters");
+        for (int i = 0; i < vetpep.size(); i++) {
+            System.out.println("Gender: " + vetpep.get(i).getType());
+            System.out.println("Name: " + vetpep.get(i).getName());
+            System.out.println("Surname: " + vetpep.get(i).getSurname());
+            System.out.println("Age: " + vetpep.get(i).getAge());
+            System.out.println("height: " + vetpep.get(i).getHeightcm() / 100 + " Meters");
         }
         ast(0);
 
@@ -40,12 +40,12 @@ public class Data {
             case 1:
                 System.out.println("Men Registers:");
                 ast(0);
-                for (int i = 0; i < vetpessoa.size(); i++) {
-                    if (vetpessoa.get(i).getType().equals("Man")) {
-                        System.out.println("Name: " + vetpessoa.get(i).getName());
-                        System.out.println("Surname: " + vetpessoa.get(i).getSurname());
-                        System.out.println("Age: " + vetpessoa.get(i).getAge());
-                        System.out.println("height: " + vetpessoa.get(i).getHeightcm() / 100 + " Meters");
+                for (int i = 0; i < vetpep.size(); i++) {
+                    if (vetpep.get(i).getType().equals("Man")) {
+                        System.out.println("Name: " + vetpep.get(i).getName());
+                        System.out.println("Surname: " + vetpep.get(i).getSurname());
+                        System.out.println("Age: " + vetpep.get(i).getAge());
+                        System.out.println("height: " + vetpep.get(i).getHeightcm() / 100 + " Meters");
                         ast(0);
                     }
 
@@ -54,12 +54,12 @@ public class Data {
             case 2:
                 System.out.println("Women registers:");
                 ast(0);
-                for (int i = 0; i < vetpessoa.size(); i++) {
-                    if (vetpessoa.get(i).getType().equals("Woman")) {
-                        System.out.println("Name: " + vetpessoa.get(i).getName());
-                        System.out.println("Surname: " + vetpessoa.get(i).getSurname());
-                        System.out.println("Age: " + vetpessoa.get(i).getAge());
-                        System.out.println("Height: " + vetpessoa.get(i).getHeightcm() / 100 + " Meters");
+                for (int i = 0; i < vetpep.size(); i++) {
+                    if (vetpep.get(i).getType().equals("Woman")) {
+                        System.out.println("Name: " + vetpep.get(i).getName());
+                        System.out.println("Surname: " + vetpep.get(i).getSurname());
+                        System.out.println("Age: " + vetpep.get(i).getAge());
+                        System.out.println("Height: " + vetpep.get(i).getHeightcm() / 100 + " Meters");
                         ast(0);
                     }
 
@@ -73,20 +73,20 @@ public class Data {
 
     public void filtronome(String nomepe) {
         ast(0);
-        for (int i = 0; i < vetpessoa.size(); i++) {
-            if (vetpessoa.get(i).getName().equals(nomepe)) {
-                System.out.println("Name: " + vetpessoa.get(i).getName());
-                System.out.println("Surname: " + vetpessoa.get(i).getSurname());
-                System.out.println("Age: " + vetpessoa.get(i).getAge());
-                System.out.println("Height: " + vetpessoa.get(i).getHeightcm() / 100 + " Meters");
+        for (int i = 0; i < vetpep.size(); i++) {
+            if (vetpep.get(i).getName().equals(nomepe)) {
+                System.out.println("Name: " + vetpep.get(i).getName());
+                System.out.println("Surname: " + vetpep.get(i).getSurname());
+                System.out.println("Age: " + vetpep.get(i).getAge());
+                System.out.println("Height: " + vetpep.get(i).getHeightcm() / 100 + " Meters");
                 ast(0);
             }
         }
     }
     public void conthomimuie(){
         System.out.println("Men and Women cont:");
-        for (int i = 0; i<vetpessoa.size();i++){
-            if(vetpessoa.get(i).getType().equals("Man")) {
+        for (int i = 0; i<vetpep.size();i++){
+            if(vetpep.get(i).getType().equals("Man")) {
                 contman++;
             }else{
                 contwom++;
