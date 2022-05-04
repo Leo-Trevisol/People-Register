@@ -59,10 +59,10 @@ public class Project {
                             data.inserepessoa(woman);
                             break;
                         default:
-                            data.asteriscos(0);
+                            data.ast(0);
                             System.out.println("Invalid option!");
                             System.out.println("Try again!");
-                            data.asteriscos(0);
+                            data.ast(0);
 
                     }
                     break;
@@ -88,24 +88,24 @@ public class Project {
                     try {
                         data.conthomimuie();
                     } catch (ArithmeticException one) {
-                        data.asteriscos(0);
+                        data.ast(0);
                         System.out.println("Empty Records!");
                         System.out.println("Try again!");
 
-                        data.asteriscos(0);
+                        data.ast(0);
                     }
                     break;
                 default:
                     if (op != 0) {
-                        data.asteriscos(0);
+                        data.ast(0);
                         System.out.println("Invalid option!");
                         System.out.println("Try again!");
-                        data.asteriscos(0);
+                        data.ast(0);
 
                     }else{
-                        data.asteriscos(0);
+                        data.ast(0);
                         System.out.println("Finished Program");
-                        data.asteriscos(0);
+                        data.ast(0);
                     }
 
             }
