@@ -41,7 +41,7 @@ public class Project {
                             System.out.println("Type the height in CM:");
                             man.setHeightcm(sc.nextFloat());
                             man.setType("Man");
-                            data.inserepessoa(man);
+                            data.peptype(man);
                             break;
                         case 2:
                             Woman woman = new Woman();
@@ -56,7 +56,7 @@ public class Project {
                             System.out.println("Type the height in CM:");
                             woman.setHeightcm(sc.nextFloat());
                             woman.setType("Woman");
-                            data.inserepessoa(woman);
+                            data.peptype(woman);
                             break;
                         default:
                             data.ast(0);
@@ -67,26 +67,26 @@ public class Project {
                     }
                     break;
                 case 2:
-                    data.mostrardados();
+                    data.showdata();
                     break;
                 case 3:
                     System.out.println("Filter by the gender:");
                     System.out.println("1- Consult men-");
                     System.out.println("2- Consult women-");
-                    int mascfem = sc.nextInt();
-                    data.filtrosex(mascfem);
+                    int mw = sc.nextInt();
+                    data.sexfilter(mw);
                     break;
                 case 4:
                     System.out.println("Filter by the name:");
                     sc.nextLine();
                     System.out.println("Type the name to be filtered:");
-                    String nomepess = sc.nextLine();
-                    data.filtronome(nomepess);
+                    String namepeps = sc.nextLine();
+                    data.namefilter(namepeps);
                     break;
 
                 case 5:
                     try {
-                        data.conthomimuie();
+                        data.contmanwom();
                     } catch (ArithmeticException one) {
                         data.ast(0);
                         System.out.println("Empty Records!");

@@ -16,12 +16,12 @@ public class Data {
     }
 
 
-    public void inserepessoa(People people) {
+    public void peptype(People people) {
         this.vetpep.add(people);
         conttotal++;
     }
 
-    public void mostrardados() {
+    public void showdata() {
         System.out.println("All registers:");
         ast(0);
         for (int i = 0; i < vetpep.size(); i++) {
@@ -35,7 +35,7 @@ public class Data {
 
     }
 
-    public void filtrosex(int op) {
+    public void sexfilter(int op) {
         switch (op) {
             case 1:
                 System.out.println("Men Registers:");
@@ -71,7 +71,7 @@ public class Data {
         }
     }
 
-    public void filtronome(String nomepe) {
+    public void namefilter(String nomepe) {
         ast(0);
         for (int i = 0; i < vetpep.size(); i++) {
             if (vetpep.get(i).getName().equals(nomepe)) {
@@ -83,7 +83,7 @@ public class Data {
             }
         }
     }
-    public void conthomimuie(){
+    public void contmanwom(){
         System.out.println("Men and Women cont:");
         for (int i = 0; i<vetpep.size();i++){
             if(vetpep.get(i).getType().equals("Man")) {
@@ -93,14 +93,14 @@ public class Data {
             }
         }
 
-        int valortotalh = (contman*100)/conttotal;
-        int valortotalm = (contwom*100)/conttotal;
+        int totalmanval = (contman*100)/conttotal;
+        int totalwomval = (contwom*100)/conttotal;
         ast(0);
         System.out.println("Man numbers: " + contman);
-        System.out.println("Man percent: " + valortotalh + "%");
+        System.out.println("Man percent: " + totalmanval + "%");
         System.out.println("------------------------------");
         System.out.println("Woman numbers: " + contwom);
-        System.out.println("Woman percent: " + valortotalm + "%");
+        System.out.println("Woman percent: " + totalwomval + "%");
         ast(0);
 
 
