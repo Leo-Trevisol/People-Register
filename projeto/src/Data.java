@@ -1,10 +1,14 @@
 import java.util.ArrayList;
+import java.util.InputMismatchException;
+import java.util.Scanner;
 
 public class Data {
 
     int conttotal = 0;
     int contman = 0;
     int contwom = 0;
+
+    Scanner cs = new Scanner(System.in);
     private ArrayList<People> vetpep = new ArrayList<>();
 
 
@@ -13,6 +17,13 @@ public class Data {
             System.out.println("");
         }
         System.out.println("************************");
+    }
+
+    public void invalid(){
+        ast(0);
+        System.out.println("Invalid option");
+        System.out.println("Try again");
+        ast(0);
     }
 
 
@@ -66,21 +77,33 @@ public class Data {
                 }
                 break;
             default:
+                ast(0);
                 System.out.println("Empty registers!");
+                System.out.println("Try again");
+                ast(0);
 
         }
     }
 
     public void namefilter(String nomepe) {
-        ast(0);
+        boolean nm=false;
         for (int i = 0; i < vetpep.size(); i++) {
             if (vetpep.get(i).getName().equals(nomepe)) {
+                nm = true;
+                ast(0);
                 System.out.println("Name: " + vetpep.get(i).getName());
                 System.out.println("Surname: " + vetpep.get(i).getSurname());
                 System.out.println("Age: " + vetpep.get(i).getAge());
                 System.out.println("Height: " + vetpep.get(i).getHeightcm() / 100 + " Meters");
                 ast(0);
+            }else{
+                nm = false;
             }
+        }
+        if(nm==false){
+            ast(0);
+            System.out.println("Nobody called " + nomepe + " registred");
+            ast(0);
         }
     }
     public void contmanwom(){
@@ -102,8 +125,15 @@ public class Data {
         System.out.println("Woman numbers: " + contwom);
         System.out.println("Woman percent: " + totalwomval + "%");
         ast(0);
-
-
-
     }
+
+    public void proend(int exit){
+        if (exit==0){
+            ast(0);
+            System.out.println("Finished program");
+            ast(0);
+            System.exit(0);
+        }
+    }
+
 }
