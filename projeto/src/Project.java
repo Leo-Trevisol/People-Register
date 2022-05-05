@@ -16,7 +16,7 @@ public class Project {
             System.out.println("2- Check all registers-");
             System.out.println("3- Check by the gender of the registered-");
             System.out.println("4- Check by the name-");
-            System.out.println("5- Check by the number of Mans and Womans-");
+            System.out.println("5- Check by the number and the percent of the genders-");
             System.out.println("ENTER '0' ANY TIME TO STOP THE PROGRAM");
             data.proend(op);
 
@@ -39,6 +39,7 @@ public class Project {
                         System.out.println("~~Persons register:~~");
                         System.out.println("1- Man Register-");
                         System.out.println("2- Woman Register-");
+                        System.out.println("3- Other-");
                         do {
 
                         try {
@@ -59,13 +60,13 @@ public class Project {
                                 Man man = new Man();
                                 System.out.println("Male Register :");
                                 sc.nextLine();
-                                System.out.println("Type the name:");
+                                System.out.println("Enter the name:");
                                 man.setName(sc.nextLine());
-                                System.out.println("Type the surname:");
+                                System.out.println("Enter the surname:");
                                 man.setSurname(sc.nextLine());
-                                System.out.println("Type the age:");
+                                System.out.println("Enter the age:");
                                 man.setAge(sc.nextInt());
-                                System.out.println("Type the height in CM:");
+                                System.out.println("Enter the height in CM:");
                                 man.setHeightcm(sc.nextFloat());
                                 man.setType("Man");
                                 data.peptype(man);
@@ -74,16 +75,31 @@ public class Project {
                                 Woman woman = new Woman();
                                 System.out.println("Female register:");
                                 sc.nextLine();
-                                System.out.println("Type the name:");
+                                System.out.println("Enter the name:");
                                 woman.setName(sc.nextLine());
-                                System.out.println("Type the surname:");
+                                System.out.println("Enter the surname:");
                                 woman.setSurname(sc.nextLine());
-                                System.out.println("Type the age:");
+                                System.out.println("Enter the age:");
                                 woman.setAge(sc.nextInt());
-                                System.out.println("Type the height in CM:");
+                                System.out.println("Enter the height in CM:");
                                 woman.setHeightcm(sc.nextFloat());
                                 woman.setType("Woman");
                                 data.peptype(woman);
+                                break;
+                            case 3:
+                                Other other = new Other();
+                                System.out.println("Another gender register");
+                                sc.nextLine();
+                                System.out.println("Enter the name:");
+                                other.setName(sc.nextLine());
+                                System.out.println("Enter the surname:");
+                                other.setSurname(sc.nextLine());
+                                System.out.println("Enter the age:");
+                                other.setAge(sc.nextInt());
+                                System.out.println("Enter the height in CM:");
+                                other.setHeightcm(sc.nextFloat());
+                                other.setType("Other");
+                                data.peptype(other);
                                 break;
                             default:
                                 data.invalid();
@@ -96,6 +112,7 @@ public class Project {
                         System.out.println("Filter by the gender:");
                         System.out.println("1- Consult men-");
                         System.out.println("2- Consult women-");
+                        System.out.println("3- Another gender-");
                         do {
 
                             try {
@@ -114,7 +131,7 @@ public class Project {
                         break;
                     case 4:
                         System.out.println("Filter by the name:");
-                        System.out.println("Type the name to be filtered:");
+                        System.out.println("Enter the name to be filtered:");
                         String namepeps = sc.nextLine();
                         data.namefilter(namepeps);
                         break;
