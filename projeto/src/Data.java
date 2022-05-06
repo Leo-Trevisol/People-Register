@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.;
+import java.util.*;
 import java.util.InputMismatchException;
 
 
@@ -159,11 +159,13 @@ public class Data {
         System.out.println("Sorted list by the age-");
         Collections.sort(vetpep);
         for (int i =0; i<vetpep.size();i++){
+            ast(0);
             System.out.println("Age: " + vetpep.get(i).getAge());
             System.out.println("Gender: " + vetpep.get(i).getType());
             System.out.println("Name: " + vetpep.get(i).getName());
             System.out.println("Surname " + vetpep.get(i).getSurname());
-            System.out.println("Height: " + vetpep.get(i).getHeightcm() + "Meters");
+            System.out.println("Height: " + vetpep.get(i).getHeightcm() / 100 + " Meters");
+            ast(0);
         }
 
     }

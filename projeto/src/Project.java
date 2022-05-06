@@ -17,6 +17,7 @@ public class Project {
             System.out.println("3- Check by the gender of the registered-");
             System.out.println("4- Check by the name-");
             System.out.println("5- Check by the number and the percent of the genders-");
+            System.out.println("6- Check ordened by the age-");
             System.out.println("ENTER '0' ANY TIME TO STOP THE PROGRAM");
             data.proend(op);
 
@@ -146,6 +147,8 @@ public class Project {
                             data.ast(0);
                         }
                         break;
+                    case 6:
+                        data.ordage();
                     default:
                         if (op != 0) {
                             data.invalid();
