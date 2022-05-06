@@ -1,4 +1,4 @@
-public abstract class People {
+public abstract class People implements Comparable <People>{
 
     private String name;
     private String surname;
@@ -44,5 +44,17 @@ public abstract class People {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    @Override
+    public int compareTo(People o) {
+        if (this.age > o.getAge()) {
+            return 1;
+        }
+        if (this.age < o.getAge()) {
+
+            return -1;
+        }
+        return 0;
     }
 }

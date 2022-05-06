@@ -1,13 +1,12 @@
 import java.util.ArrayList;
+import java.util.;
 import java.util.InputMismatchException;
-import java.util.Scanner;
+
 
 public class Data {
 
     int conttotal = 0;
 
-
-    Scanner cs = new Scanner(System.in);
     private ArrayList<People> vetpep = new ArrayList<>();
 
 
@@ -154,6 +153,19 @@ public class Data {
             ast(0);
             System.exit(0);
         }
+    }
+
+    public void ordage(){
+        System.out.println("Sorted list by the age-");
+        Collections.sort(vetpep);
+        for (int i =0; i<vetpep.size();i++){
+            System.out.println("Age: " + vetpep.get(i).getAge());
+            System.out.println("Gender: " + vetpep.get(i).getType());
+            System.out.println("Name: " + vetpep.get(i).getName());
+            System.out.println("Surname " + vetpep.get(i).getSurname());
+            System.out.println("Height: " + vetpep.get(i).getHeightcm() + "Meters");
+        }
+
     }
 
 }
