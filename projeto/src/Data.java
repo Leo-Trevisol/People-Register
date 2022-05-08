@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.ArrayList;
 import java.util.*;
 import java.util.InputMismatchException;
@@ -169,5 +171,18 @@ public class Data {
         }
 
     }
+
+    public void avarage(){
+        int av =0;
+        for(int i=0; i<vetpep.size();i++){
+            av =  (av + vetpep.get(i).getAge());
+
+        }
+            ast(0);
+            System.out.println("The avarage age of the " + vetpep.size() + " registered it`s: " + (av/ vetpep.size()) + " years old");;
+            ast(0);
+    }
+
+
 
 }
