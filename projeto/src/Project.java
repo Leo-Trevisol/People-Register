@@ -19,7 +19,7 @@ public class Project {
                 System.out.println("4- Check by the name-");
                 System.out.println("5- Check by the number and the percent of the genders-");
                 System.out.println("6- Check ordened by the age-");
-                System.out.println("7- Check the avarege age od registered-");
+                System.out.println("7- Check the avarege age of registered-");
                 System.out.println("ENTER '0' ANY TIME TO STOP THE PROGRAM");
                 data.proend(op);
             }
